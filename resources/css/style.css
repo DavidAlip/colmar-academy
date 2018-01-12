@@ -1,0 +1,185 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*--          header          --*/
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  padding: 0 2rem;
+  background-color: rgba(36, 117, 204, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  font-size: 2rem;
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.colmar {
+  font-weight: 700;
+  color: rgb(1, 55, 69);
+}
+
+.academy {
+  color: rgb(84, 125, 135);
+}
+
+nav a {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  color: rgb(84, 125, 135);
+  transition: color 2s ease-in-out 60ms;
+}
+
+nav a:hover {
+  color: rgba(19, 61, 107, 1);
+}
+
+/*--          section 1           --*/
+.banner1 {
+  padding: 3rem 0rem 3rem 2rem;
+  background-color: rgba(146, 153, 99, .55);
+  display: flex;
+}
+
+.banner1-image {
+  width: 60%;
+}
+
+.banner1-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0rem 14rem 0rem 3.5rem;
+
+}
+
+.banner1-details h1 {
+  font-size: 5rem;
+  padding-bottom: 3rem;
+  font-weight: 600;
+  color: rgb(27, 28, 18);
+}
+
+.banner1-details h2 {
+  font-size: 3rem;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 3rem;
+  color: rgba(18, 58, 102, .75);
+}
+
+.banner1-details p {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(182, 204, 36, .5);
+  padding: .5rem 0rem;
+}
+
+.banner1-details a {
+  color: rgba(9, 28, 48, .75);
+  transition: color 3s ease-out 50ms;
+}
+
+.banner1-details a:hover {
+  color: rgba(9, 28, 48, 1);
+}
+
+/*--          section 2           --*/
+.banner2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0rem 3rem 2rem;
+  background-color: rgba(255, 225, 71, .25);
+}
+
+.banner2-image {
+  width: 60%;
+  padding: 2rem 1rem;
+}
+
+.banner2 h1 {
+  padding-top: 2rem;
+  font-size: 4rem;
+  font-weight: 600;
+  color: rgb(27, 28, 18);
+}
+
+.quotation {
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-size: 2rem;
+  color: rgba(18, 58, 102, .9);
+  padding: 2rem 0rem;
+}
+
+.quote-author {
+  font-family: 'Raleway', sans-serif;
+  color: rgba(18, 58, 102, .9);
+  font-size: 1.5rem;
+}
+
+.banner2-info {
+  width: 40%;
+  padding: 0rem 2rem;
+}
+
+.banner2-info .info {
+  display: flex;
+}
+
+.banner2images {
+  width: 35%;
+  height: auto;
+
+}
+
+.banner2images img {
+  padding: 1rem .5rem;
+}
+
+.banner2details {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+.banner2details h3 {
+   font-size: 3rem;
+   font-weight: 500;
+   color: rgba(27, 28, 18, .85);
+   padding-bottom: 1.5rem;
+}
+
+.banner2details p {
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+  color: rgba(27, 28, 18, .8);
+}
+
+.banner2details a {
+  font-size: 2rem;
+  color: rgba(135, 161, 255, .8);
+}
+
+.orientation {
+  background-color: rgba(146, 153, 99, .6);
+}
+
+.campus {
+  background-color: rgba();
+}
+
+.guest-lecture {
+  background-color: rgba(255, 225, 71, .75);
+}
