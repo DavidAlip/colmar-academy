@@ -1,13 +1,16 @@
 html {
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-size: cover;
 }
 
 /*--          header          --*/
-.top-nav {
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 6rem;
+  height: 4rem;
   padding: 0 2rem;
   background-color: rgba(36, 117, 204, 0.2);
 }
@@ -26,160 +29,456 @@ html {
 .colmar {
   font-weight: 700;
   color: rgb(1, 55, 69);
+  text-shadow: 2px 2px 2px black;
 }
 
 .academy {
   color: rgb(84, 125, 135);
+  text-shadow: 1px 1px 1px black;
 }
 
-nav a {
+.desktop-view a {
   font-size: 1.5rem;
   margin-right: 1.5rem;
   color: rgb(84, 125, 135);
-  transition: color 2s ease-in-out 60ms;
+  transition: color 2s ease-in-out 60ms, font-weight 2.5s ease-in-out 60ms;
 }
 
-nav a:hover {
+.desktop-view a:hover {
   color: rgba(19, 61, 107, 1);
+  font-weight: 500;
 }
 
-/*--          section 1           --*/
-.banner1 {
-  padding: 3rem 0rem 3rem 2rem;
-  background-color: rgba(146, 153, 99, .55);
-  display: flex;
+.mobile-view {
+  display: none;
 }
 
-.banner1-image {
-  width: 60%;
+@media only screen and (max-width: 950px) {
+  .logo {
+    display: none;
+  }
+  .desktop-view {
+    display: none;
+  }
+  header {
+    display: block;
+    margin: 0 0  !important;
+    padding: 0 0 !important;
+  }
+  .mobile-view {
+    display: flex !important;
+    justify-content: space-around !important;
+    padding: 1rem 1rem;
+  }
+  .mobile-view img {
+    height: 3rem;
+  }
+}
+  /*--          section 1           --*/
+  .banner1 {
+    padding: 3rem 0rem 3rem 2rem;
+    background-color: rgba(146, 153, 99, .55);
+    background-size: cover;
+    display: flex;
+  }
+  .banner1-image {
+    width: 100%;
+  }
+  .banner1-image img {
+    width: 100%;
+    height: auto;
+  }
+  .banner1-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0rem 14rem 0rem 3.5rem;
+  }
+  .banner1-details h1 {
+    font-size: 5rem;
+    padding-bottom: 3rem;
+    font-weight: 600;
+    color: rgb(27, 28, 18);
+  }
+  .banner1-details h2 {
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 3rem;
+    color: rgba(18, 58, 102, .75);
+  }
+  .banner1-details p {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(182, 204, 36, .5);
+    padding: .5rem 0rem;
+  }
+  .banner1-details a {
+    color: rgba(9, 28, 48, .75);
+    transition: color 3s ease-out 50ms;
+  }
+  .banner1-details a:hover {
+    color: rgba(9, 28, 48, 1);
+  }
+  @media screen and (max-width: 950px) {
+    .banner1 {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0rem 0rem;
+      margin: 0rem 0rem;
+      width: 100% !important;
+    }
+    .banner1-details {
+      margin: 0rem 0rem !important;
+      padding: 2rem 1rem !important;
+    }
+    .banner1-details h1 {
+      font-size: 4rem !important;
+      padding-bottom: 1rem !important;
+      font-weight: 600;
+      color: rgb(27, 28, 18);
+    }
+    .banner1-details h2 {
+      font-size: 1.75rem !important;
+      font-family: 'Raleway', sans-serif;
+      padding-bottom: 3rem;
+      color: rgba(18, 58, 102, .75);
+    }
+    .banner1-details p {
+      font-size: 2rem !important;
+      padding: .5rem 0rem;
+    }
+  }
+  /*--          section 2           --*/
+  .banner2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0rem 3rem 2rem;
+  }
+  .banner2-image {
+    width: 60%;
+    padding: 2rem 1rem;
+  }
+  .banner2-image img {
+    width: 100%;
+    height: auto;
+  }
+  .banner2 h1 {
+    padding-top: 2rem;
+    font-size: 4rem;
+    font-weight: 600;
+    color: rgb(27, 28, 18);
+  }
+  .quotation {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+    color: rgba(18, 58, 102, .9);
+    padding: 2rem 0rem;
+  }
+  .quote-author {
+    font-family: 'Raleway', sans-serif;
+    color: rgba(18, 58, 102, .9);
+    font-size: 1.5rem;
+  }
+  .banner2-info {
+    width: 40%;
+    padding: 0rem 2rem;
+  }
+  .banner2-info .info {
+    display: flex;
+  }
+  .banner2images {
+    width: 35%;
+    height: auto;
+  }
+  .banner2images img {
+    padding: 1rem .5rem;
+  }
+  .banner2details {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+  }
+  .banner2images img {
+    width: 100%;
+    height: auto;
+  }
+  .banner2details h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgba(27, 28, 18, .85);
+    padding-bottom: 1.5rem;
+  }
+  .banner2details p {
+    font-size: 1.75rem;
+    padding-bottom: 1.5rem;
+    color: rgba(27, 28, 18, .8);
+  }
+  .banner2details a {
+    font-size: 2rem;
+    color: rgba(135, 161, 255, .8);
+  }
+  .orientation {
+    background-color: rgba(146, 153, 99, .6);
+  }
+  .campus {
+    background-color: rgba();
+  }
+  .guest-lecture {
+    background-color: rgba(255, 225, 71, .75);
+  }
+  .mobile-image img{
+    display: none;
+  }
+
+  /* mobile display settings */
+  @media screen and (max-width: 950px) {
+    .right {
+      display: none;
+    }
+    .banner2 {
+      padding: 0 0 !important;
+      margin: 0 0 !important;
+      background-size: cover;
+    }
+    .desktop-image img {
+      display: none;
+    }
+
+    .left {
+      margin: 0 0;
+      padding: 0 0;
+      width: 100%;
+    }
+    .info {
+      width: 100%;
+      padding: 0rem 0rem 1rem 0rem;
+      margin: 1rem 1rem 4rem 1rem;
+      flex-direction: column;
+    }
+    .banner2images {
+      width: 100%;
+      padding: 0 0;
+      margin: 0 0;
+    }
+    .mobile-image img {
+      width: 100% !important;
+      height: auto;
+      padding: 0 0;
+      margin: 0 0;
+      display: block;
+    }
+
+    .banner2details h3 {
+      font-size: 2rem !important;
+      padding: 1rem 0rem !important;
+    }
+    .banner2details p {
+      font-size: 1.75rem;
+      padding-bottom: 1.5rem;
+      color: rgba(27, 28, 18, .8);
+    }
+    .banner2details a {
+      font-size: 2rem;
+      color: rgba(135, 161, 255, .8);
+      padding-bottom: 1rem;
+    }
+  }
+
+
+
+  /*--          section 3           --*/
+  .banner3 {
+    background-color: rgba(146, 153, 99, .55);
+    padding: 2rem 0rem;
+  }
+  .banner3-heading {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 4rem;
+    font-weight: 600;
+    color: rgb(27, 28, 18);
+  }
+
+/* mobile media display settings */
+  @media only screen and (max-width: 950px) {
+    .banner3-heading {
+      padding: 1rem 1rem 0rem 1rem;
+      font-size: 3rem;
+    }
+    .banner3 img {
+      display: none;
+    }
+    .banner3 p {
+      display: none;
+    }
+    .banner3-classes {
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 0 !important;
+      margin: 0 0 !important;
+      width: 100%;
+    }
+    .classes {
+      padding: 0 0;
+      margin: 0 0;
+      height: 0 0;
+    }
+    .classes h3 {
+      font-weight: normal;
+    }
+  }
+
+  .banner3-classes {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 7rem;
+    justify-content: center;
+  }
+  .classes {
+    background-color: rgba(135, 161, 255, .5);
+    margin: 1.5rem 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .classes img {
+    height: auto;
+  }
+  .classes h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 2rem 2rem 0rem 2rem;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(18, 58, 102, 1);
+  }
+  .classes p {
+    line-height: 2rem;
+    font-size: 1.75rem;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(18, 58, 102, 1);
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+  }
+  /*--          Section 4           --*/
+  .banner4 {
+    padding: 4rem 3rem;
+    background-color: rgba(255, 225, 71, .15);
+  }
+  .banner4 h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    color: rgb(27, 28, 18);
+    padding-bottom: 3rem;
+  }
+  .thesis-exhibit {
+    display: flex;
+    width: 100%;
+  }
+
+  .thesis-video {
+    width: 60%;
+  }
+  video {
+    padding-bottom: 2rem;
+  }
+  .thesis-exhibit h3 {
+    padding-top: 2rem;
+    font-size: 4rem;
+    font-weight: 600;
+    color: rgb(27, 28, 18);
+  }
+  .thesis-exhibit p {
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(27, 28, 18, .85);
+  }
+  .other-exhibit {
+    width: 40%;
+    margin: 1.5rem 1rem;
+  }
+  .other-exhibit img {
+    padding: 1.3rem 1.3rem;
+  }
+  .exhibit {
+    display: flex;
+    align-items: center;
+  }
+  .exhibit h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgba(18, 58, 102, 1);
+    line-height: 1.2em;
+  }
+  .exhibit p {
+    font-size: 1.7em;
+    line-height: 1.2em;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(18, 58, 102, 1);
+  }
+  .thesis {
+    background-color: rgba(146, 153, 99, .6);
+  }
+
+  /* mobile media display settings */
+@media only screen and (max-width: 1600px) {
+  .banner4 {
+    margin: 0 0 !important;
+    padding: 0 0 !important;
+  }
+  .thesis-exhibit {
+    width: 100% !important;
+    padding: 0 0;
+    margin: 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .thesis-video {
+    width: 100%;
+  }
+  .banner4 h1 {
+    font-size: 3rem;
+    padding: 1rem 1rem;
+  }
+  .thesis-description {
+    display: none;
+  }
+  .other-exhibit {
+    display: none;
+  }
 }
 
-.banner1-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0rem 14rem 0rem 3.5rem;
 
-}
+  /*--          footer          --*/
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 1rem;
+    font-size: 1rem;
+    border-top: 1px solid rgb(84, 125, 135);
+  }
+  footer p {
+    padding: 2rem 1rem;
+  }
 
-.banner1-details h1 {
-  font-size: 5rem;
-  padding-bottom: 3rem;
-  font-weight: 600;
-  color: rgb(27, 28, 18);
-}
+  @media only screen and (max-width: 950px) {
+    footer {
+      padding: 2rem 2rem;
+      justify-content: center;
+      font-size: 1rem;
+      font-style: bold;
+      border-top: none;
+    }
+    footer p {
+      font-size: 16px;
+      padding: 2rem 1rem;
+    }
+    footer .terms-privacy {
+      display: none;
+    }
 
-.banner1-details h2 {
-  font-size: 3rem;
-  font-family: 'Raleway', sans-serif;
-  padding-bottom: 3rem;
-  color: rgba(18, 58, 102, .75);
-}
-
-.banner1-details p {
-  text-align: center;
-  font-size: 2.5rem;
-  font-family: 'Raleway', sans-serif;
-  background-color: rgba(182, 204, 36, .5);
-  padding: .5rem 0rem;
-}
-
-.banner1-details a {
-  color: rgba(9, 28, 48, .75);
-  transition: color 3s ease-out 50ms;
-}
-
-.banner1-details a:hover {
-  color: rgba(9, 28, 48, 1);
-}
-
-/*--          section 2           --*/
-.banner2 {
-  display: flex;
-  justify-content: space-between;
-  padding: 3rem 0rem 3rem 2rem;
-  background-color: rgba(255, 225, 71, .25);
-}
-
-.banner2-image {
-  width: 60%;
-  padding: 2rem 1rem;
-}
-
-.banner2 h1 {
-  padding-top: 2rem;
-  font-size: 4rem;
-  font-weight: 600;
-  color: rgb(27, 28, 18);
-}
-
-.quotation {
-  font-family: 'Raleway', sans-serif;
-  font-style: italic;
-  font-size: 2rem;
-  color: rgba(18, 58, 102, .9);
-  padding: 2rem 0rem;
-}
-
-.quote-author {
-  font-family: 'Raleway', sans-serif;
-  color: rgba(18, 58, 102, .9);
-  font-size: 1.5rem;
-}
-
-.banner2-info {
-  width: 40%;
-  padding: 0rem 2rem;
-}
-
-.banner2-info .info {
-  display: flex;
-}
-
-.banner2images {
-  width: 35%;
-  height: auto;
-
-}
-
-.banner2images img {
-  padding: 1rem .5rem;
-}
-
-.banner2details {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 2rem;
-}
-
-.banner2details h3 {
-   font-size: 3rem;
-   font-weight: 500;
-   color: rgba(27, 28, 18, .85);
-   padding-bottom: 1.5rem;
-}
-
-.banner2details p {
-  font-size: 2rem;
-  padding-bottom: 1.5rem;
-  color: rgba(27, 28, 18, .8);
-}
-
-.banner2details a {
-  font-size: 2rem;
-  color: rgba(135, 161, 255, .8);
-}
-
-.orientation {
-  background-color: rgba(146, 153, 99, .6);
-}
-
-.campus {
-  background-color: rgba();
-}
-
-.guest-lecture {
-  background-color: rgba(255, 225, 71, .75);
-}
+  }
